@@ -16,7 +16,7 @@ import { UserModule } from './user/user.module';
       imports: [ConfigModule, AppModule],
       inject: [ConfigService],
       driver: ApolloDriver,
-      useFactory: async (configService: ConfigService) => {
+      useFactory: async () => {
         return {
           playground: true,
           autoSchemaFile: join(process.cwd(), 'src/schema.qgl'),
